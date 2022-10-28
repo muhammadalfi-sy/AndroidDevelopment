@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-class StatefulActivity: ComponentActivity() {
+class StatefulActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -42,7 +42,7 @@ fun EchoText() {
         )
         Spacer(modifier = Modifier.height(24.dp))
         Text(
-            text = "Halo "+ displayedText.value +", kuliah apa kerja?"
+            text = "Halo " + displayedText.value + ", kuliah apa kerja?"
         )
     }
 }
