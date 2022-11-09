@@ -26,6 +26,13 @@ class StatefulActivity : ComponentActivity() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun EchoText() {
+    // lambda assignment
+    val toUpperCase: (String) -> String = { value: String ->
+        value.uppercase()
+    }
+    // implementasi lambda
+    println(toUpperCase("Alfi Syahrial"))
+
     var displayedText = remember {
         mutableStateOf("")
     }
@@ -38,11 +45,12 @@ fun EchoText() {
             value = displayedText.value,
             onValueChange = {
                 displayedText.value = it
-            }
+            },
+            label = { Text(text = "Nama")}
         )
         Spacer(modifier = Modifier.height(24.dp))
         Text(
-            text = "Halo " + displayedText.value + ", kuliah apa kerja?"
+            text = "Haloo " + displayedText.value + ", apa kabar hari ini?"
         )
     }
 }
