@@ -1,7 +1,7 @@
 package com.example.androiddevelopment.tipeFile
 
-data class (
+data class Mobil(
     val name: String,
-    var price: Int,
-    val
+    val merk: String,
+    var price: Int
 )
